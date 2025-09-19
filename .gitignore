@@ -1,0 +1,53 @@
+# Node modules
+/node_modules/
+
+# Build outputs
+/dist/
+/build/
+/.out/        # some tools
+/.parcel-cache
+
+# Local env files (never commit secrets)
+.env
+.env.local
+.env.*.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE / editor
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Mac specific
+.AppleDouble
+.LSOverride
+
+# Lockfiles (keep one per project if you prefer a specific package manager)
+# Uncomment the one you DON'T use (or leave them all ignored — but it's usually good to commit one lockfile)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# Coverage reports
+/coverage/
+
+# TypeScript
+*.tsbuildinfo
+
+# Storybook
+/storybook-static
+
+# Temporary files
+/.temp
+/.cache
+/tmp

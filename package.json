@@ -1,0 +1,20 @@
+{
+  "name": "markdown-to-slack-converter",
+  "version": "1.0.0",
+  "description": "You can write Slack message with \"REAL\" Markdown, powered by jsx-slack.",
+  "main": "index.html",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html"
+  },
+  "dependencies": {
+    "@speee-js/jsx-slack": "1.2.0",
+    "markdown-it": "10.0.0",
+    "markdown-it-block-image": "0.0.3"
+  },
+  "devDependencies": {
+    "@babel/core": "7.2.0",
+    "parcel-bundler": "^1.6.1"
+  },
+  "keywords": []
+}
