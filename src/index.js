@@ -18,7 +18,20 @@ const updateButton = json => {
   send.classList.remove('disabled')
 }
 
+const resetToReady = () => {
+  blocks.classList.add('ready')
+  blocks.classList.remove('error')
+  blocks.textContent = 'A generated JSON for Block Kit will show in this pane.'
+  send.classList.add('disabled')
+  send.href = '#'
+}
+
 const updateBlocks = () => {
+  if (!textarea.value.trim()) {
+    resetToReady()
+    return
+  }
+
   blocks.classList.remove('ready')
 
   try {
@@ -38,3 +51,13 @@ const updateBlocks = () => {
 }
 
 textarea.addEventListener('input', updateBlocks, false)
+
+const loadTemplate = document.querySelector('#load-template')
+loadTemplate.addEventListener('click', () => {
+  fetch('./template.md')
+    .then(r => r.text())
+    .then(text => {
+      textarea.value = text
+      updateBlocks()
+    })
+}, false)
